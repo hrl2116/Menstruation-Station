@@ -1,38 +1,93 @@
 .App {
   text-align: center;
+  padding: 4rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0rem 2rem 2rem 2rem;
+  color: #36476D;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Styling for list component */
+.List {
+  margin-top: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  padding: 1.2rem 1.5rem;
+  border-radius: 20px;
+  text-align: left;
+  margin: 1rem 0rem;
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.item-primary-text {
+  color: #36476D;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-secondary-text {
+  color: #828EA6;
+  font-size: 1.2rem;
+  line-height: 1rem;
+}
+
+.item-number {
+  margin: auto 3rem auto 1rem;
+}
+
+.item-delete {
+  margin: auto 1rem auto auto;
+  width: 1.2rem;
+}
+
+img {
+  width: 100%;
+}
+
+/* Styling for form input component */
+.Form {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+}
+
+.form-input {
+  border:0;
+  border-bottom: 2px solid #AFB1B5;
+  padding: 0.5rem;
+  margin: 1rem;
+  background-color: transparent;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.form-input::placeholder {
+  color: #AFB1B5;
+  font-weight: 600;
+}
+
+.form-button {
+  background-color: #5954C8;
+  color: #FFFFFF;
+  border-radius: 12px;
+  height: fit-content;
+  padding: 0.5rem 2rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: auto 0.5rem;
+}
+
+.form-button:hover {
+  background-color: #4E49AB;
+  cursor: pointer;
 }
