@@ -1,20 +1,14 @@
 import './App.css';
 import List from './List';
 import Form from './Form';
-import { useEffect, useState } from 'react';
+import Map from './Map';
+import React, { useRef, useEffect, useState } from 'react';
+import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+ 
+mapboxgl.accessToken = 'pk.eyJ1IjoiaHJsMjExNiIsImEiOiJjbGI1emo5dmEwN2lsM3d0NWt0ZGI0OTZhIn0.y4M3jZNZ_FzTrVCpoz6cTg';
 
 const initialSongList = [
-  {
-    songTitle: "Fireworks", 
-    artistName: "Katy Perry" 
-  }, 
-  { 
-    songTitle: "Party In The USA", 
-    artistName: "Miley Cyrus" 
-  }, 
-  { songTitle: "Dynamite", 
-    artistName: "Taio Cruz" 
-  }]
+  ]
 
 function App() {
   const [songList, setSongList] = useState(initialSongList);
@@ -37,7 +31,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Header">My Favorite Songs</div>
+      <div className="Header">Menstruation Station</div>
+      <Map />
       <Form addItem={handleAdd}/>
       <List list={songList} removeItem={handleDelete}/>
     </div>
