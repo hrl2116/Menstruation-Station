@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Header">Menstruation Station</div>
+
       
       <Map />
       <SearchBar />
