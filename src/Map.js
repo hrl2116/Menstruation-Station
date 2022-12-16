@@ -18,7 +18,28 @@ useEffect(() => {
     center: [lng, lat],
     zoom: zoom
     });
+
+    map.current.on('click', (event) => {
+        // If the user clicked on one of your markers, get its information.
+        const features = map.current.queryRenderedFeatures(event.point, {
+          layers: ['spots1'] // replace with your layer name
+        });
+        if (!features.length) {
+          return;
+        }
+        const feature = features[0];
+      
+        // Code from the next step will go here.
+        const popup = new mapboxgl.Popup({ offset: [0, -325] }) //[horizontal, vertical]
+            .setLngLat(feature.geometry.coordinates)
+            .setHTML(
+                `<h3>${feature.properties.label}</h3>`
+            )
+            .addTo(map.current);
+      });
 });
+
+
 
 return (
     <div>
