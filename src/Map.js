@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import { GeolocateControl } from "react-map-gl";
+import './App.css';
+import { AttributionControl } from 'mapbox-gl';
  
 mapboxgl.accessToken = 'pk.eyJ1IjoiaHJsMjExNiIsImEiOiJjbGI1emo5dmEwN2lsM3d0NWt0ZGI0OTZhIn0.y4M3jZNZ_FzTrVCpoz6cTg';
 
@@ -17,7 +19,8 @@ useEffect(() => {
     container: mapContainer.current,
     style: 'mapbox://styles/hrl2116/clb608t2i000815sf7b80g403',
     center: [lng, lat],
-    zoom: zoom
+    zoom: zoom,
+    attributionControl: false
     });
 
     map.current.on('click', (event) => {

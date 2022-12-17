@@ -1,0 +1,35 @@
+.InfoPanel {
+    background-color: #FFFFFF;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    margin: None;
+}
+
+.panel-title {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.panel-address {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.restrooms {
+    font-size: 15px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.distance-button {
+    height: 50px;
+    width: 200px;
+    background-color: lightgray;
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    margin: 10px;
+}
