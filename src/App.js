@@ -5,6 +5,7 @@ import Map from './Map';
 import SearchBar from './SearchBar';
 import ListScroll from "./ListScroll";
 import React, { useRef, useEffect, useState } from 'react';
+import Shapiro from "./Shapiro";
 
 const initialSongList = [
   ]
@@ -45,6 +46,7 @@ function App() {
 
       
       <Map />
+      <Shapiro />
       <SearchBar />
       <ListScroll buttons={buttons}/>
       {/* <Form addItem={handleAdd}/> */}
