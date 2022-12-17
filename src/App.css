@@ -9,6 +9,18 @@
   margin: 0rem 2rem 2rem 2rem;
   color: #36476D;
 }
+h3{
+  font-size: 16px;
+  text-align: left;
+
+  font-weight: 600;
+  color: white;
+}
+p {
+  font-size: 12px;
+  text-align: left;
+  color: white ;
+}
 
 /* Styling for list component */
 .List {
@@ -90,4 +102,19 @@ img {
 .form-button:hover {
   background-color: #4E49AB;
   cursor: pointer;
+}
+.popup{
+  background-color: #D0342C;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 20px;
+
+}
+.xButton{
+  background-color: None;
+  outline: 0;
 }

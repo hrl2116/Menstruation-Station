@@ -4,6 +4,7 @@ import Form from './Form';
 import Map from './Map';
 import SearchBar from './SearchBar';
 import ListScroll from "./ListScroll";
+import Alert from './Alert';
 import React, { useRef, useEffect, useState } from 'react';
 
 const initialSongList = [
@@ -20,6 +21,13 @@ function App() {
     {label: 'Lerner Hall'},
     {label: 'Uris'}
   ];
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  function handleButtonClick() {
+    // Toggle the showPopup state when the button is clicked
+    setShowPopup(!showPopup);
+  }
 
 
   useEffect(() => {
@@ -42,16 +50,22 @@ function App() {
 
   return (
     <div className="App">
-
-      
       <Map />
       <SearchBar />
       <ListScroll buttons={buttons}/>
       {/* <Form addItem={handleAdd}/> */}
       {/* <List list={songList} removeItem={handleDelete}/> */}
-    </div>
+    
+    <button onClick={handleButtonClick}>Show pop-up</button>
+    {/* Render the pop-up screen if the showPopup state is true */}
+      <div className="popup">
+        <h3>Thanks for your report! </h3>
+        <p>Facilities has been notified and will restock this station as soon as possible</p>
+        <button className="xButton"onClick={handleButtonClick}>x</button>
+      </div>
+    )
+  </div>
 
-  
   );
 }
 
