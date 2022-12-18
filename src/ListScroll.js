@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import './ListScroll.css';
 
 
-function ListScroll() {
+function ListScroll({setBuilding}) {
   const [searchQuery, setSearchQuery] = useState('');
   const [buttons, setButtons] = useState([
-    { id: 1, label: 'Mudd' },
+    { id: 1, label: 'Mudd Hall' },
     { id: 2, label: 'Schapiro' },
-    { id: 3, label: 'Hamilton' },
+    { id: 3, label: 'Uris' },
     { id: 4, label: 'Butler Library' },
     { id: 5, label: 'Lerner' },
-    { id: 6, label: 'Uris' },
+    { id: 6, label: 'Hamilton' },
     { id: 7, label: 'Lehman' },
     { id: 8, label: 'Noco' },
     { id: 9, label: 'Schermerhorn' },
@@ -47,7 +47,7 @@ function ListScroll() {
       </div>
       <div className="scrolly" style={{overflow: 'scroll', height: '350px', width: '500px', display: 'flex', flexDirection: 'column'}}>
         {filteredButtons.map((button) => (
-          <button className="wide-button" onClick={() => handleClick(button.id)} key={button.id}>{button.label}</button>
+          <button className="wide-button" key={button.id} onClick={ () => setBuilding(button.label)}>{button.label}</button>
         ))}
         {/* <img src="/Users/manasisoman/Menstruation-Station/src/search icon.png" alt="Search" style={{ width: '100px', height: '100px' }} /> */}
 
