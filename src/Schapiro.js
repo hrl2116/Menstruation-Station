@@ -10,10 +10,24 @@ function Schapiro({close}){
     setShowPopup(!showPopup);
     }
     return(
-        <div className="InfoPanel" onClick={close}>
-            <div className="panel-title">
-                Schapiro
+        <div className="InfoPanel">
+            <div className="grid-container-element">
+                {/* <div className="top-left"> */}
+                    <div className="grid-child-element">
+                        <div className="panel-title">
+                            Schapiro
+                        </div>
+                    </div>
+                {/* </div> */}
+                {/* <div className="top-right"> */}
+                    <div className="grid-child-element">
+                        <div className="button-right">
+                            <button onClick={close}> X </button>
+                        </div>
+                    </div>
+                {/* </div> */}
             </div>
+                
             <div className="panel-address">
                 New York, NY 10027
             </div>
