@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ListScroll.css';
 
 
-function ListScroll() {
+function ListScroll({setBuilding}) {
   const [searchQuery, setSearchQuery] = useState('');
   const [buttons, setButtons] = useState([
     { id: 1, label: 'Mudd' },
@@ -39,8 +39,8 @@ function ListScroll() {
       </div>
       <div className="scrolly" style={{overflow: 'scroll', height: '150px', width: '500px', display: 'flex', flexDirection: 'column'}}>
         {filteredButtons.map((button) => (
-          <button className="wide-button" key={button.id}>{button.label}</button>
-        ))}
+          <button className="wide-button" key={button.id} onClick={ () => setBuilding(button.label)}>{button.label}</button>
+        ))}``
       </div>
 
 
