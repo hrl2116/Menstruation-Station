@@ -36,9 +36,9 @@ function ListScroll({setBuilding}) {
     <div className="button-list">
       <div className = "box">
       </div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+      <div className="dot"></div>
+      <div className="dot"></div>
+      <div className="dot"></div>
       <div className = "box">
       </div>
 
