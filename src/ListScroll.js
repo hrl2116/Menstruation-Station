@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './ListScroll.css';
-import Shapiro from "./Shapiro";
 
 
 function ListScroll() {
