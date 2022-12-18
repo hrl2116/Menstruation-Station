@@ -4,6 +4,7 @@ import Form from './Form';
 import Map from './Map';
 import SearchBar from './SearchBar';
 import ListScroll from "./ListScroll";
+import Alert from './Alert';
 import React, { useRef, useEffect, useState } from 'react';
 
 
@@ -21,6 +22,8 @@ function App() {
     {label: 'Lerner Hall'},
     {label: 'Uris'}
   ];
+
+  
 
 
   useEffect(() => {
@@ -43,16 +46,15 @@ function App() {
 
   return (
     <div className="App">
-
-      
       <Map />
       <SearchBar />
       <ListScroll buttons={buttons}/>
       {/* <Form addItem={handleAdd}/> */}
       {/* <List list={songList} removeItem={handleDelete}/> */}
-    </div>
+    
 
-  
+  </div>
+
   );
 }
 
