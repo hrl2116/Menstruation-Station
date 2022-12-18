@@ -55,3 +55,24 @@
     justify-content: right;
 
 }
+
+.grid-container-element {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.top-left {
+    display: flex;
+    justify-content: left;
+}
+
+.top-right {
+    display: flex;
+    justify-content: right;
+}
+
+.button-right {
+    display: flex;
+    justify-content: right;
+}
