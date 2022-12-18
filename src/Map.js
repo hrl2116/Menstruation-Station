@@ -4,6 +4,8 @@ import { GeolocateControl } from "react-map-gl";
 import './App.css';
 import { AttributionControl } from 'mapbox-gl';
 import Schapiro from './Schapiro';
+import Mudd from './Mudd';
+import Uris from './Uris';
 import ListScroll from "./ListScroll";
  
 mapboxgl.accessToken = 'pk.eyJ1IjoiaHJsMjExNiIsImEiOiJjbGI1emo5dmEwN2lsM3d0NWt0ZGI0OTZhIn0.y4M3jZNZ_FzTrVCpoz6cTg';
@@ -60,8 +62,7 @@ function setBuilding(building) {
 return (
     <div>
     <div ref={mapContainer} className="map-container" style={{ width: '100vw', height: '80vh' }}/>   
-    {show === 'Schapiro' ? <Schapiro close={closePopup}/>: <ListScroll setBuilding={setBuilding}/>}
-    {show}
+    {show === 'Schapiro' ? <Schapiro close={closePopup}/>: (show === 'Mudd Hall' ? <Mudd close={closePopup}/>: (show === 'Uris' ? <Uris close={closePopup}/>: <ListScroll setBuilding={setBuilding}/>))}
     {/* {show === 'Mudd' ? <Mudd />: ""} */}
     {/* <Schapiro /> */}
     </div>
