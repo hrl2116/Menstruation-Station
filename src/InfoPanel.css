@@ -1,12 +1,12 @@
 .InfoPanel {
     background-color: #FFFFFF;
     text-align: left;
-    padding: 1.2rem 1.5rem;
+    padding: 0.5rem 0.8rem;
     margin: None;
 }
 
 .panel-title {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .restrooms {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .button-container {
@@ -25,11 +25,33 @@
 }
 
 .distance-button {
-    height: 50px;
+    height: 45px;
     width: 200px;
     background-color: lightgray;
     border-radius: 15px;
     font-size: 16px;
     border: none;
     margin: 10px;
+}
+.out-tampon-button {
+    height: 30px;
+    width: 150px;
+    background-color: lightgray;
+    border-radius: 9px;
+    font-size: 12px;
+    border: none;
+    margin: 4px;
+    
+    justify-content: left;
+}
+.out-pad-button {
+    height: 30px;
+    width: 150px;
+    background-color: lightgray;
+    border-radius: 9px;
+    font-size: 12px;
+    border: none;
+    margin: 4px;
+    justify-content: right;
+
 }

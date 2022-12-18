@@ -23,12 +23,7 @@ function App() {
     {label: 'Uris'}
   ];
 
-  const [showPopup, setShowPopup] = useState(false);
-
-  function handleButtonClick() {
-    // Toggle the showPopup state when the button is clicked
-    setShowPopup(!showPopup);
-  }
+  
 
 
   useEffect(() => {
@@ -58,14 +53,7 @@ function App() {
       {/* <Form addItem={handleAdd}/> */}
       {/* <List list={songList} removeItem={handleDelete}/> */}
     
-    <button onClick={handleButtonClick}>Show pop-up</button>
-    {/* Render the pop-up screen if the showPopup state is true */}
-      <div className="popup">
-        <h3>Thanks for your report! </h3>
-        <p>Facilities has been notified and will restock this station as soon as possible</p>
-        <button className="xButton"onClick={handleButtonClick}>x</button>
-      </div>
-    )
+
   </div>
 
   );
