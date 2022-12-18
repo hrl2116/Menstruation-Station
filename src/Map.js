@@ -3,6 +3,7 @@ import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-load
 import { GeolocateControl } from "react-map-gl";
 import './App.css';
 import { AttributionControl } from 'mapbox-gl';
+import Schapiro from './Schapiro';
  
 mapboxgl.accessToken = 'pk.eyJ1IjoiaHJsMjExNiIsImEiOiJjbGI1emo5dmEwN2lsM3d0NWt0ZGI0OTZhIn0.y4M3jZNZ_FzTrVCpoz6cTg';
 
@@ -12,6 +13,7 @@ const map = useRef(null);
 const [lng, setLng] = useState(-73.960610); // change these to fix initial viewpoint
 const [lat, setLat] = useState(40.809156);
 const [zoom, setZoom] = useState(17);
+const [show, setShow] = useState('');
 
 useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -33,6 +35,7 @@ useEffect(() => {
         }
         const feature = features[0];
       
+        /*
         // Code from the next step will go here.
         const popup = new mapboxgl.Popup({ offset: [0, -325] }) //[horizontal, vertical]
             .setLngLat(feature.geometry.coordinates)
@@ -40,15 +43,21 @@ useEffect(() => {
                 `<h3>${feature.properties.label}</h3>`
             )
             .addTo(map.current);
+        */
+        setShow(feature.properties.label);
       });
 });
 
-
-
+function closePopup() {
+  setShow('');
+};
 
 return (
     <div>
     <div ref={mapContainer} className="map-container" style={{ width: '100vw', height: '80vh' }}/>   
+    {show === 'Schapiro' ? <Schapiro close={closePopup}/>: ""}
+    {/* {show === 'Mudd' ? <Mudd />: ""} */}
+    {/* <Schapiro /> */}
     </div>
     );
 }

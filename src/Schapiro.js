@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './InfoPanel.css'
 
-function Shapiro(){
+function Schapiro({close}){
 
 
     return(
-        <div className="InfoPanel">
+        <div className="InfoPanel" onClick={close}>
             <div className="panel-title">
-                Shapiro
+                Schapiro
             </div>
             <div className="panel-address">
                 New York, NY 10027
@@ -26,4 +26,4 @@ function Shapiro(){
     );
 }
 
-export default Shapiro;
+export default Schapiro;
