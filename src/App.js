@@ -4,8 +4,9 @@ import Form from './Form';
 import Map from './Map';
 import SearchBar from './SearchBar';
 import ListScroll from "./ListScroll";
+import Alert from './Alert';
 import React, { useRef, useEffect, useState } from 'react';
-import Shapiro from "./Shapiro";
+
 
 
 
@@ -14,8 +15,6 @@ function App() {
 
   return (
     <div className="App">
-
-      
       <Map />
       <ListScroll />
 
