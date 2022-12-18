@@ -5,27 +5,8 @@ import Map from './Map';
 import SearchBar from './SearchBar';
 import ListScroll from "./ListScroll";
 import React, { useRef, useEffect, useState } from 'react';
+import Shapiro from "./Shapiro";
 
-// const initialSongList = [
-//   ]
-
-// const buildings = [
-//   {name: 'Mudd'},
-//   {name: 'Schapiro'},
-//   {name: 'Hamilton'},
-//   {name: 'Butler Library'},
-//   {name: 'Lerner Hall'},
-//   {name: 'Uris'}
-// ];
-
-// const buttons = [
-//   {id: 1,label: 'Mudd'},
-//   {id: 2,label: 'Schapiro'},
-//   {id: 3,label: 'Hamilton'},
-//   {id: 4,label: 'Butler Library'},
-//   {id: 5,label: 'Lerner Hall'},
-//   {id: 6,label: 'Uris'}
-// ];
 
 
 function App() {
@@ -82,13 +63,16 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Header">Menstruation Station</div>
+
       
       <Map />
       {/* <SearchBar /> */}
       <ListScroll />
 
+      <Shapiro />
 
+      {/* <Form addItem={handleAdd}/> */}
+      {/* <List list={songList} removeItem={handleDelete}/> */}
     </div>
 
 
