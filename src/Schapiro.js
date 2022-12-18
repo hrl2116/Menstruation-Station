@@ -10,7 +10,10 @@ function Schapiro({close}){
     setShowPopup(!showPopup);
     }
     return(
-        <div className="InfoPanel">
+        // position: absolute;
+        // left: 0;
+        // bottom: 0;
+        <div className="InfoPanel" style={{position: 'absolute', left: 0, bottom: 0}}>
             <div className="grid-container-element">
                 {/* <div className="top-left"> */}
                     <div className="grid-child-element">

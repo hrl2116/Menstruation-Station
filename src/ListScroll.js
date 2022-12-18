@@ -45,7 +45,7 @@ function ListScroll({setBuilding}) {
       <div>
         <input className = "search" type="text" placeholder="Search for more stations" value={searchQuery} onChange={handleSearch} />
       </div>
-      <div className="scrolly" style={{overflow: 'scroll', height: '350px', width: '500px', display: 'flex', flexDirection: 'column'}}>
+      <div className="scrolly" style={{overflow: 'scroll', height: '350px', display: 'flex', flexDirection: 'column'}}>
         {filteredButtons.map((button) => (
           <button className="wide-button" key={button.id} onClick={ () => setBuilding(button.label)}>{button.label}</button>
         ))}
