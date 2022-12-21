@@ -53,9 +53,19 @@ function Schapiro({close}){
             </div>
             {showPopup && (
                 <div className="popup">
-                    <h3>Thanks for your report! </h3>
+                    <div className="popup-container-element">
+                        <div className="grid-child-element">
+                            <h3>Thanks for your report! </h3>
+                        </div>
+                        <div className="grid-child-element">
+                            <div className="button-right">
+                                <button onClick={handleButtonClick}> X </button>
+                            </div>
+                        </div>
+                    </div>
+
                     <p>Facilities has been notified and will restock this station as soon as possible</p>
-                    <button onClick={handleButtonClick}>x</button>
+                    
                 </div>
             )}
             

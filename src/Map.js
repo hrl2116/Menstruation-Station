@@ -61,7 +61,7 @@ function setBuilding(building) {
 
 return (
     <div>
-    <div ref={mapContainer} className="map-container" style={{ width: '100vw', height: '80vh' }}/>   
+    <div ref={mapContainer} className="map-container" style={{ width: '100vw', height: '70vh' }}/>   
     {show === 'Schapiro' ? <Schapiro close={closePopup}/>: (show === 'Mudd Hall' ? <Mudd close={closePopup}/>: (show === 'Uris' ? <Uris close={closePopup}/>: <ListScroll setBuilding={setBuilding}/>))}
     {/* {show === 'Mudd' ? <Mudd />: ""} */}
     {/* <Schapiro /> */}
