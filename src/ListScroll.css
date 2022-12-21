@@ -24,7 +24,7 @@
     height: 40px;
     margin: 3px;
     border-radius: 14px 14px 14px 14px;
-    background-color:rgb(234, 233, 233)
+    background-color: #FFCCD4
     
 }
 .wide-button:hover {
@@ -33,6 +33,7 @@
 
 .button-list{
     padding-left: 17px;
+    background-color: #FFE6EE;
 }
 
 .search{
@@ -44,7 +45,7 @@
     border-radius: 14px 14px 14px 14px;
     text-align: center;
     font-style: italic;
-    background-color: rgb(164, 164, 164);
+    background-color: #ECECEC;
     color: rgb(0, 0, 0);
 }
 
